@@ -12,8 +12,8 @@ Um projeto completo para fazer scraping de produtos da Amazon usando Back-end em
 
 ## 📋 Pré-requisitos:
 
-- [Bun](https://bun.sh/) instalado
-- [Node.js](https://nodejs.org/) (para o frontend)
+- [Bun](https://bun.sh/) instalado;
+- [Node.js](https://nodejs.org/) (para o frontend).
 
 ## 🛠️ Instalação:
 
