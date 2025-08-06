@@ -72,7 +72,7 @@ Para cada produto encontrado, são extraídos:
 
 ## ⚠️ Observações importantes:
 
-### Tratamento de erros
+### Tratamento de erros:
 - O backend inclui tratamento para erros de rede;
 - Validação de parâmetros de entrada;
 - Tratamento de erros de parsing HTML;
