@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Scraper - Buscador de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header da aplicação -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-search"></i>
+                Amazon Scraper
+            </h1>
+            <p class="subtitle">Busque produtos da Amazon de forma rápida e eficiente!</p>
+        </div>
+    </header>
+
+    <!-- Seção principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Formulário de busca -->
+            <section class="search-section">
+                <div class="search-container">
+                    <h2>Buscar produtos:</h2>
+                    <p>Digite uma palavra-chave para encontrar produtos na Amazon:</p>
+                    
+                    <form id="searchForm" class="search-form">
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="keywordInput" 
+                                placeholder="Ex: smartphone, notebook, fones de ouvido..."
+                                required
+                                autocomplete="off"
+                            >
+                            <button type="submit" id="searchBtn">
+                                <i class="fas fa-search"></i>
+                                Buscar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Seção de loading -->
+            <section id="loadingSection" class="loading-section hidden">
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p>Buscando produtos na Amazon...</p>
+                    <small>Isso pode levar alguns segundos</small>
+                </div>
+            </section>
+
+            <!-- Seção de resultados -->
+            <section id="resultsSection" class="results-section hidden">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Resultados da busca</h2>
+                    <div class="results-info">
+                        <span id="resultsCount">0 produtos encontrados</span>
+                        <button id="clearResults" class="clear-btn">
+                            <i class="fas fa-times"></i>
+                            Limpar
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="productsGrid" class="products-grid">
+                    <!-- Produtos serão inseridos aqui dinamicamente -->
+                </div>
+            </section>
+
+            <!-- Seção de erro -->
+            <section id="errorSection" class="error-section hidden">
+                <div class="error-container">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3 id="errorTitle">Erro na busca</h3>
+                    <p id="errorMessage">Ocorreu um erro durante a busca. Tente novamente.</p>
+                    <button id="retryBtn" class="retry-btn">
+                        <i class="fas fa-redo"></i>
+                        Tentar Novamente
+                    </button>
+                </div>
+            </section>
+
+            <!-- Seção de nenhum resultado -->
+            <section id="noResultsSection" class="no-results-section hidden">
+                <div class="no-results-container">
+                    <i class="fas fa-search"></i>
+                    <h3>Nenhum produto encontrado</h3>
+                    <p>Tente usar palavras-chave diferentes ou mais específicas.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Amazon Scraper - Projeto Educacional</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> para fins educacionais</p>
+        </div>
+    </footer>
+
+    <!-- Template para card de produto -->
+    <template id="productTemplate">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="" alt="Imagem do produto" class="product-img">
+                <div class="product-overlay">
+                    <a href="" target="_blank" class="view-product">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver na Amazon
+                    </a>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title"></h3>
+                <div class="product-rating">
+                    <span class="rating-stars"></span>
+                    <span class="rating-text"></span>
+                </div>
+                <div class="product-reviews">
+                    <i class="fas fa-comments"></i>
+                    <span class="reviews-text"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html> 
