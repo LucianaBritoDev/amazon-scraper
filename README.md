@@ -4,8 +4,8 @@ Um projeto completo para fazer scraping de produtos da Amazon usando Back-end em
 
 ## 🚀 Características:
 
-- **Backend**: Servidor Express com Bun;
-- **Frontend**: Interface moderna com Vite;
+- **Back-end**: Servidor Express com Bun;
+- **Front-end**: Interface moderna com Vite;
 - **Scraping**: Extração de dados de produtos da Amazon;
 - **API REST**: Endpoint para busca de produtos;
 - **Interface Responsiva**: Design limpo e organizado.
